@@ -3,7 +3,7 @@ import webpackStream from 'webpack-stream';
 import webpackConfig from '../webpack.config.cjs';
 
 const compileScripts = () =>
-  gulp.src(['source/js/main.js'])
+  gulp.src(['source/js/*.js'])
       .pipe(webpackStream(webpackConfig))
       .pipe(gulp.dest('build/js'));
 

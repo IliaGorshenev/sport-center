@@ -1,28 +1,80 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-import Swiper from './vendor/swiper.js';
 
-const swiper = new Swiper('.slider', {
-  loop: true,
+const desktopBreakpoint = window.matchMedia(`(min-width: 1199px)`);
+const tabletBreakpoint = window.matchMedia(`(min-width: 980px)`);
+const mobileBreakpoint = window.matchMedia(`(min-width: 767px)`);
 
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
+const breakpointChecker = () => {
+  if (desktopBreakpoint.matches) {
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      loop: true,
+      slidesPerView: 4,
+      spaceBetween: 3 + '%',
+      // freeMode: true,
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  }
 
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-});
+  else if (tabletBreakpoint.matches) {
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      loop: true,
+      slidesPerView: 3,
+      spaceBetween: 3 + '%',
+      // freeMode: true,
 
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  }
+
+  else if (mobileBreakpoint.matches) {
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      loop: true,
+      slidesPerView: 2,
+      spaceBetween: 3 + '%',
+      // freeMode: true,
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  }
+  
+  else {
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 0,
+      // freeMode: true,
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  }
+};
+
+desktopBreakpoint.addListener(breakpointChecker);
+tabletBreakpoint.addListener(breakpointChecker);
+mobileBreakpoint.addListener(breakpointChecker);
+breakpointChecker();
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {

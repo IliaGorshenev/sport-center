@@ -745,42 +745,109 @@ body {
   }
 }
 
-// .instructors {
-//   max-width: 100%;
-//   height: auto;
+.instructors {
+  max-width: 100%;
+  height: auto;
 
-//   &__wrapper {
-//     // box-sizing: content-box;
-//     display: flex;
+  &__wrapper {
+    box-sizing: content-box;
+    display: flex;
 
-//     margin: 0 auto;
-//     // padding: 120px 7.5%;
-//     // padding-bottom: 53px;
-//     // max-width: 1160px;
+    margin: 0 auto;
+    padding: 120px 7.5%;
+    padding-bottom: 53px;
+    max-width: 1160px;
 
-//     // @include vp-1199 {
-//     //   padding: 100px 5.8%;
-//     //   padding-bottom: 50px;
-//     // }
+    @include vp-1199 {
+      padding: 100px 5.8%;
+      padding-bottom: 50px;
+    }
 
-//     // @include vp-767 {
-//     //   padding: 70px 4.6%;
-//     //   padding-bottom: 35px;
-//     // }
-//   }
-// }
+    @include vp-767 {
+      padding: 70px 4.6%;
+      padding-bottom: 35px;
+    }
+  }
 
-// .instructors__slide {
-//   min-height: 294px;
-//   margin-right: 10px;
-//   background-color: #00359F;
+  &__list {
+    display: flex;
+  }
+}
 
-//   &:last-child {
-//     background-color: red;
-//   }
-// }
+.instructors__slide {
+  min-height: 294px;
+
+  @include vp-767 {
+    aspect-ratio: 82/100;
+  }
+
+  &:last-child {
+    background-color: red;
+  }
+}
 
 .swiper {
-  width: 400px;
-  height: 400px;
+  width: 100%;
+}
+
+.instructors__slide:hover {
+  & .instructor__title {
+    position: static;
+  }
+
+  & .instructor__image-container {
+    z-index: -1;
+  }
+}
+
+.instructor {
+  color: #ffffff;
+
+  &__wrapper {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background: rgba(16, 38, 84, 0.89);
+    padding: 58px 20px;
+  }
+
+  &__title {
+    margin: 0 auto;
+    margin-bottom: 5px;
+    position: absolute;
+    bottom: 5px;
+    z-index: 5;
+  }
+
+  &__subtitle {
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  &__advantages {
+    padding: 0;
+    margin: 0;
+  }
+
+  &__advantage {
+    margin: 0;
+    margin-bottom: 24px;
+  }
+
+  &__image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 }
