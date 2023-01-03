@@ -12,10 +12,44 @@
 @font-face {
   font-style: normal;
   font-weight: 400;
-  font-family: "";
+  font-family: "Roboto Condensed";
 
   font-display: swap;
   src:
-    url("../fonts/.woff2") format("woff2"),
-    url("../fonts/.woff") format("woff");
+    url("../fonts/RobotoCondensed-Regular.woff") format("woff"),
+    url("../fonts/RobotoCondensed-Regular.woff2") format("woff2");
 }
+
+@font-face {
+  font-style: normal;
+  font-weight: 300;
+  font-family: "Roboto Condensed";
+
+  font-display: swap;
+  src:
+    url("../fonts/RobotoCondensed-Light.woff") format("woff"),
+    url("../fonts/RobotoCondensed-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Roboto Condensed";
+
+  font-display: swap;
+  src:
+    url("../fonts/RobotoCondensed-Bold.woff") format("woff"),
+    url("../fonts/RobotoCondensed-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 600;
+  font-family: "Alumni Sans";
+
+  font-display: swap;
+  src:
+    url("../../fonts/AlumniSans-Bold.woff2") format("woff2"),
+    url("../../fonts/AlumniSans-Bold.woff") format("woff");
+}
+
