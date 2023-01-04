@@ -1,0 +1,21 @@
+.game {
+  &__wrapper {
+    display: flex;
+    box-sizing: content-box;
+
+    margin: 0 auto;
+    padding: 120px 7.5%;
+    padding-bottom: 53px;
+    max-width: 1160px;
+
+    @include vp-1199 {
+      padding: 100px 5.8%;
+      padding-bottom: 50px;
+    }
+
+    @include vp-767 {
+      padding: 70px 4.6%;
+      padding-bottom: 35px;
+    }
+  }
+}

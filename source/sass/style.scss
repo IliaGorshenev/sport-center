@@ -14,6 +14,7 @@
 @import "global/reboot";
 @import "global/utils";
 @import "global/container";
+@import "global/body";
 
 // Blocks
 // ---------------------------------
@@ -21,6 +22,12 @@
 @import "blocks/btn";
 @import "blocks/modal";
 @import "blocks/header";
+@import "blocks/intro";
+@import "blocks/price";
+@import "blocks/card";
+@import "blocks/game";
+@import "blocks/game-offer";
+@import "blocks/instructors";
 
 // ---------------------------------
 
