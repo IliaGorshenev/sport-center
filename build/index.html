@@ -224,7 +224,10 @@
               <a href="#" class="game-offer__button">заполните заявку</a>
             </div>
             <div class="game-offer__image-container">
-              <img src="img/game-offer-photo.jpg" alt="" class="game-offer__image">
+              <picture>
+                <source type="image/webp" srcset="img/game-offer-photo.webp 1x, img/game-offer-photo@2x.webp 2x">
+                <img src="img/game-offer-photo.jpg" srcset="img/game-offer-photo@2x.jpg" alt="Игра" class="game-offer__image">
+              </picture>
             </div>
           </article>
         </div>
