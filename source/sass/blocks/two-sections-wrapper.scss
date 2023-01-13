@@ -1,0 +1,14 @@
+.two-sections-wrapper {
+  display: grid;
+  background: linear-gradient(to right, #102654 50%, #ffffff 50%);
+  grid-template-columns: repeat(2, minmax(100px, 683px));
+  justify-content: center;
+  margin: 0 auto;
+
+  border-top: 1px solid #74819c;
+
+  @include vp-1199 {
+    display: flex;
+    flex-direction: column;
+  }
+}

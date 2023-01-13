@@ -1,9 +1,18 @@
 body {
+  display: flex;
+  flex-direction: column;
+
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
   line-height: 150%;
 
+  min-height: 100%;
+
   color: #102654;
+}
+
+main {
+  flex-grow: 3;
 }

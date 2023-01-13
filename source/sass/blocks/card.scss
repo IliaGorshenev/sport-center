@@ -1,20 +1,39 @@
 .card {
-
-  background: linear-gradient(148.82deg, #D10A42 0.85%, #00359F 100%);
+  background-color: #ffffff;
   padding: 7px;
+
+  @include vp-1199 {
+    min-height: 448px;
+  }
+
+  @include vp-767 {
+    min-height: 384px;
+  }
 
   &__wrapper {
     display: flex;
     flex-direction: column;
 
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     padding: 57px 23px;
+    padding-bottom: 60px;
+
+    @include vp-1199 {
+      padding: 59px 23px;
+      padding-bottom: 62px;
+      height: 100%;
+    }
+
+    @include vp-767 {
+      padding: 40px 23px;
+      padding-bottom: 47px;
+    }
   }
 
   &__title {
     text-align: center;
     margin: 0;
-    margin-bottom: 13px;
+    margin-bottom: 10px;
 
     font-weight: 700;
     font-size: 26px;
@@ -22,19 +41,20 @@
     color: #102654;
 
     @include vp-767 {
-      margin-bottom: 20px;
+      font-size: 22px;
+      margin-bottom: 8px;
     }
   }
 
   &__subtitle {
-    color: #495A7D;
+    color: #495a7d;
     text-align: center;
 
     margin: 0;
-    margin-bottom: 60px;
+    margin-bottom: 58px;
 
     @include vp-767 {
-      margin-bottom: 70px;
+      margin-bottom: 47px;
     }
   }
 
@@ -42,52 +62,178 @@
     position: relative;
     display: flex;
     margin: 0 auto;
-    margin-bottom: 31px;
+    margin-bottom: 32px;
     align-items: baseline;
 
     &--5000::after {
       font-size: 100px;
       font-weight: 700;
-      color: #E8E8E8;
+      color: #e8e8e8;
       opacity: 0.48;
 
       content: "5000";
       position: absolute;
-      top: 7px;
+      top: 13px;
       right: 50%;
       transform: translateX(50%);
 
       z-index: 1;
+
+      @include vp-767 {
+        font-size: 80px;
+      }
     }
 
     &--1700::after {
       font-size: 100px;
       font-weight: 700;
-      color: #E8E8E8;
+      color: #e8e8e8;
       opacity: 0.48;
 
       content: "1700";
       position: absolute;
-      top: 7px;
+      top: 13px;
       right: 50%;
       transform: translateX(50%);
 
       z-index: 1;
+
+      @include vp-767 {
+        font-size: 80px;
+      }
     }
 
     &--2700::after {
       font-size: 100px;
       font-weight: 700;
-      color: #E8E8E8;
+      color: #e8e8e8;
       opacity: 0.48;
 
       content: "2700";
       position: absolute;
-      top: 7px;
+      top: 13px;
       right: 50%;
       transform: translateX(50%);
 
       z-index: 1;
+
+      @include vp-767 {
+        font-size: 80px;
+      }
+    }
+
+    &--3000::after {
+      font-size: 100px;
+      font-weight: 700;
+      color: #e8e8e8;
+      opacity: 0.48;
+
+      content: "3000";
+      position: absolute;
+      top: 13px;
+      right: 50%;
+      transform: translateX(50%);
+
+      z-index: 1;
+
+      @include vp-767 {
+        font-size: 80px;
+      }
+    }
+
+    &--10200::after {
+      font-size: 100px;
+      font-weight: 700;
+      color: #e8e8e8;
+      opacity: 0.48;
+
+      content: "10200";
+      position: absolute;
+      top: 13px;
+      right: 50%;
+      transform: translateX(50%);
+
+      z-index: 1;
+
+      @include vp-767 {
+        font-size: 80px;
+      }
+    }
+
+    &--16200::after {
+      font-size: 100px;
+      font-weight: 700;
+      color: #e8e8e8;
+      opacity: 0.48;
+
+      content: "16200";
+      position: absolute;
+      top: 13px;
+      right: 50%;
+      transform: translateX(50%);
+
+      z-index: 1;
+
+      @include vp-767 {
+        font-size: 80px;
+      }
+    }
+
+    &--60000::after {
+      font-size: 100px;
+      font-weight: 700;
+      color: #e8e8e8;
+      opacity: 0.48;
+
+      content: "60000";
+      position: absolute;
+      top: 13px;
+      right: 50%;
+      transform: translateX(50%);
+
+      z-index: 1;
+
+      @include vp-767 {
+        font-size: 80px;
+      }
+    }
+
+    &--20400::after {
+      font-size: 100px;
+      font-weight: 700;
+      color: #e8e8e8;
+      opacity: 0.48;
+
+      content: "20400";
+      position: absolute;
+      top: 13px;
+      right: 50%;
+      transform: translateX(50%);
+
+      z-index: 1;
+
+      @include vp-767 {
+        font-size: 80px;
+      }
+    }
+
+    &--32000::after {
+      font-size: 100px;
+      font-weight: 700;
+      color: #e8e8e8;
+      opacity: 0.48;
+
+      content: "32000";
+      position: absolute;
+      top: 13px;
+      right: 50%;
+      transform: translateX(50%);
+
+      z-index: 1;
+
+      @include vp-767 {
+        font-size: 80px;
+      }
     }
   }
 
@@ -95,11 +241,17 @@
     font-weight: 700;
     font-size: 60px;
     line-height: 150%;
-    color: #103AAE;
+    color: #103aae;
 
     margin-right: 15px;
 
     z-index: 2;
+
+    @include vp-767 {
+      position: relative;
+      right: -5px;
+      font-size: 48px;
+    }
   }
 
   &__price-icon {
@@ -107,6 +259,11 @@
     font-weight: 400;
     font-size: 60px;
     line-height: 150%;
+    z-index: 2;
+
+    @include vp-767 {
+      font-size: 48px;
+    }
   }
 
   &__button {
@@ -117,15 +274,49 @@
     text-transform: uppercase;
 
     display: block;
-    padding: 24px;
+    padding: 24px 25px;
     box-sizing: border-box;
     width: 206px;
     margin: 0 auto;
     background-color: #ffffff;
-    // background: linear-gradient(97.05deg, #ED0233 17.6%, #003EB7 95.31%);
 
     border: 2px solid #102654;
     text-align: center;
     color: #102654;
+    cursor: pointer;
+
+    @include vp-1199 {
+      align-self: flex-end;
+    }
+  }
+
+  &:focus {
+    background: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
+
+    & .card__button {
+      color: #ffffff;
+      border: none;
+      background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+    }
+  }
+
+  &:hover {
+    background: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
+
+    & .card__button {
+      color: #ffffff;
+      border: none;
+      background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+    }
+  }
+
+  &--active {
+    background: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
+
+    & .card__button {
+      color: #ffffff;
+      border: none;
+      background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+    }
   }
 }

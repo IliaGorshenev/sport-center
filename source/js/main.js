@@ -1,6 +1,38 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 
+const PRICE_BUTTONS = document.querySelectorAll('[data-price-button]');
+const PRICE_LISTS = document.querySelectorAll('[data-price-list]');
+const PRICE_PERIOD_ITEMS = document.querySelectorAll('[data-price-period-item]');
+const PRICE_PERIOD_LINKS = document.querySelectorAll('[data-price-period-link]');
+
+const priceOpener = function (where) {
+  const PRICE_LIST = document.querySelector(`[data-price-list="${where}"]`);
+  PRICE_LISTS.forEach((list) => {
+    list.classList.remove('price__card-list--active');
+  });
+  PRICE_LIST.classList.add('price__card-list--active');
+};
+
+PRICE_BUTTONS.forEach((priceButton) => {
+  priceButton.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    priceOpener(priceButton.getAttribute('data-price-button'));
+
+    PRICE_PERIOD_ITEMS.forEach((item) => {
+      item.classList.remove('price__period-item--active');
+    });
+
+    PRICE_PERIOD_LINKS.forEach((link) => {
+      link.classList.remove('price__period-link--active');
+    });
+
+    priceButton.closest('[data-price-period-item]').classList.add('price__period-item--active');
+    priceButton.closest('[data-price-period-link]').classList.add('price__period-link--active');
+  });
+});
+
+
 const validatePhone = function () {
   const eventCalllback = function (e) {
     const el = e.target;
@@ -32,68 +64,55 @@ const validatePhone = function () {
   }
 };
 
-const desktopBreakpoint = window.matchMedia(`(min-width: 1199px)`);
-const tabletBreakpoint = window.matchMedia(`(min-width: 980px)`);
-const mobileBreakpoint = window.matchMedia(`(min-width: 767px)`);
+const DESKTOP_BREAKPOINT = window.matchMedia(`(min-width: 1199px)`);
+const TABLET_BRAKEPOINT = window.matchMedia(`(min-width: 980px)`);
+const MOBILE_BREAKPOINT = window.matchMedia(`(min-width: 767px)`);
+
+const PLAYER = document.querySelector('[data-video-button]');
+const IFRAME = document.querySelector('[data-video]');
+const VIDEO_LAYER = document.querySelector('[data-video-layer]');
+PLAYER.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  IFRAME.setAttribute('src', 'https://www.youtube.com/embed/9TZXsZItgdw?autoplay=1&mute=1');
+  VIDEO_LAYER.remove();
+});
 
 const breakpointChecker = () => {
-  if (desktopBreakpoint.matches) {
+  if (DESKTOP_BREAKPOINT.matches) {
     const swiper1 = new Swiper('.swiper--1', {
-      // Optional parameters
       loop: true,
       slidesPerView: 4,
-      spaceBetween: 3 + '%',
-      // freeMode: true,
-
-      // Navigation arrows
+      spaceBetween: 3.1 + '%',
       navigation: {
         nextEl: '.swiper-button-next--1',
         prevEl: '.swiper-button-prev--1',
       },
     });
-  }
-
-  else if (tabletBreakpoint.matches) {
+  } else if (TABLET_BRAKEPOINT.matches) {
     const swiper1 = new Swiper('.swiper--1', {
-      // Optional parameters
       loop: true,
       slidesPerView: 3,
       spaceBetween: 3 + '%',
-      // freeMode: true,
-
-      // Navigation arrows
       navigation: {
         nextEl: '.swiper-button-next--1',
         prevEl: '.swiper-button-prev--1',
       },
     });
-  }
-
-  else if (mobileBreakpoint.matches) {
+  } else if (MOBILE_BREAKPOINT.matches) {
     const swiper1 = new Swiper('.swiper--1', {
-      // Optional parameters
       loop: true,
       slidesPerView: 2,
-      spaceBetween: 3 + '%',
-      // freeMode: true,
-
-      // Navigation arrows
+      spaceBetween: 5 + '%',
       navigation: {
         nextEl: '.swiper-button-next--1',
         prevEl: '.swiper-button-prev--1',
       },
     });
-  }
-
-  else {
+  } else {
     const swiper1 = new Swiper('.swiper--1', {
-      // Optional parameters
       loop: true,
       slidesPerView: 1,
       spaceBetween: 0,
-      // freeMode: true,
-
-      // Navigation arrows
       navigation: {
         nextEl: '.swiper-button-next--1',
         prevEl: '.swiper-button-prev--1',
@@ -102,72 +121,31 @@ const breakpointChecker = () => {
   }
 };
 
-desktopBreakpoint.addListener(breakpointChecker);
-tabletBreakpoint.addListener(breakpointChecker);
-mobileBreakpoint.addListener(breakpointChecker);
+DESKTOP_BREAKPOINT.addListener(breakpointChecker);
+TABLET_BRAKEPOINT.addListener(breakpointChecker);
+MOBILE_BREAKPOINT.addListener(breakpointChecker);
 breakpointChecker();
 
 const swiper2 = new Swiper('.swiper--2', {
-  // Optional parameters
   loop: false,
   slidesPerView: 1,
-  // freeMode: true,
-
   mousewheel: {
     invert: false,
 
     releaseOnEdges: true,
-    sensitivity: 0
-},
+    sensitivity: 0,
+  },
 
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next--2',
     prevEl: '.swiper-button-prev--2',
   },
 });
-// ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
-
-  // Utils
-  // ---------------------------------
-
   iosVhFix();
-
-
-  // Modules
-  // ---------------------------------
-
-  // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
-  // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
     validatePhone();
   });
 });
-
-// ---------------------------------
-
-// ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.
-
-// привязывайте js не на классы, а на дата атрибуты (data-validate)
-
-// вместо модификаторов .block--active используем утилитарные классы
-// .is-active || .is-open || .is-invalid и прочие (обязателен нейминг в два слова)
-// .select.select--opened ❌ ---> [data-select].is-open ✅
-
-// выносим все в дата атрибуты
-// url до иконок пинов карты, настройки автопрокрутки слайдера, url к json и т.д.
-
-// для адаптивного JS используется matchMedia и addListener
-// const breakpoint = window.matchMedia(`(min-width:1024px)`);
-// const breakpointChecker = () => {
-//   if (breakpoint.matches) {
-//   } else {
-//   }
-// };
-// breakpoint.addListener(breakpointChecker);
-// breakpointChecker();
-
-// используйте .closest(el)

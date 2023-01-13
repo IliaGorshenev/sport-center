@@ -9,6 +9,19 @@
     font-size: 54px;
     line-height: 65px;
     letter-spacing: 0.03em;
+
+    @include vp-1199 {
+      font-size: 42px;
+      line-height: 50px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    @include vp-767 {
+      font-size: 32px;
+      line-height: 38px;
+      margin-bottom: 38px;
+    }
   }
 
   &__outer-swiper-wrapper {
@@ -26,133 +39,32 @@
     flex-direction: column;
 
     margin: 0 auto;
-    padding: 20px 3.5%;
+    padding: 10px 5.5%;
     padding-bottom: 103px;
     max-width: 1160px;
 
     @include vp-1199 {
-      padding: 100px 5.8%;
+      padding: 59px 13.8%;
+      padding-left: 12.4%;
       padding-bottom: 50px;
     }
 
     @include vp-767 {
-      padding: 70px 4.6%;
-      padding-bottom: 35px;
+      padding: 30px 14.6%;
+      padding-bottom: 70px;
     }
   }
 
   &__list {
     display: flex;
   }
-}
 
-.instructors__slide {
-  min-height: 294px;
-
-  @include vp-767 {
-    aspect-ratio: 82/100;
-  }
-
-  &:last-child {
-    background-color: red;
-  }
-}
-
-.swiper {
-  width: 100%;
-}
-
-.swiper--1 {
-  padding: 0;
-}
-
-.swiper-button-prev--1 {
-  transform: translateX(-70px);
-
-  @include vp-767 {
-    display: none;
-  }
-}
-
-.swiper-button-next--1 {
-  transform: translateX(70px);
-
-  @include vp-767 {
-    display: none;
-  }
-}
-
-.instructors__slide:hover {
-  & .instructor__title {
-    position: static;
-    transform: none;
-  }
-
-  & .instructor__image-container {
-    z-index: -1;
-  }
-}
-
-.instructor {
-  color: #ffffff;
-
-  &__wrapper {
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  &__slide {
     min-height: 294px;
-    height: 100%;
-    background: rgba(16, 38, 84, 0.89);
-    padding: 54px 19%;
-    padding-left: 17%;
-    padding-bottom: 45px;
 
     @include vp-767 {
+      aspect-ratio: 82/100;
       min-height: 274px;
-    }
-  }
-
-  &__title {
-    font-size: 18px;
-
-    margin: 0 auto;
-    position: absolute;
-    bottom: 25px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 5;
-  }
-
-  &__subtitle {
-    margin: 0 auto;
-    margin-bottom: 30px;
-  }
-
-  &__advantages {
-    margin: 0;
-    padding-left: 25px;
-  }
-
-  &__advantage {
-    font-size: 14px;
-
-    margin: 0;
-    margin-bottom: 8px;
-  }
-
-  &__image-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    & img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
     }
   }
 }

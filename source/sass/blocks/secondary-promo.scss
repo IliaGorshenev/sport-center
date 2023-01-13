@@ -1,0 +1,63 @@
+.secondary-promo {
+  display: flex;
+  padding: 7px;
+  background: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
+  min-height: 211px;
+
+  &__wrapper {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #ffffff;
+    padding: 25px 30px;
+    padding-bottom: 27px;
+    width: 100%;
+
+    @include vp-767 {
+      padding: 40px 30px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 26px;
+
+    margin: 0;
+    margin-bottom: 10px;
+
+    @include vp-767 {
+      text-align: center;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+
+    @include vp-767 {
+      text-align: center;
+    }
+  }
+
+  &__button {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+
+    margin-top: auto;
+    border-bottom: 2px solid #1c3374;
+    align-self: flex-start;
+    text-transform: uppercase;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    @include vp-767 {
+      margin: 0 auto;
+      margin-top: auto;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+form {
+  display: flex;
+  flex-direction: column;
+
+  & input[type="text"],
+  input[type="tel"],
+  input[type="email"] {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+
+    background: #102654;
+    width: 100%;
+    min-height: 30.5px;
+    padding: 7px 0;
+    margin-bottom: 27px;
+
+    color: #ffffff;
+    border: none;
+    border-bottom: 1px solid #74819c;
+
+    @include vp-767 {
+      padding: 13px 2px;
+      padding-bottom: 4px;
+    }
+  }
+
+  & input::placeholder {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
+  }
+
+  & .form__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 7.3%;
+
+    border: none;
+    padding: 0;
+    margin: 0;
+
+    @include vp-1199 {
+      column-gap: 11.3%;
+    }
+
+    @include vp-767 {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  & .form__button {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0.45px;
+    color: #ffffff;
+    background: #102654;
+    border: 3px solid #ffffff;
+    cursor: pointer;
+    padding: 16px 0;
+
+    @include vp-767 {
+      padding: 13px 0;
+      margin-top: 12px;
+    }
+
+    &:hover {
+      background-color: #ffffff;
+      color: #102654;
+    }
+  }
+}

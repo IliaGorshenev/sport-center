@@ -1,0 +1,87 @@
+.comment {
+  min-height: 242px;
+  background: #1c3374;
+  display: grid;
+
+  padding: 62px;
+  padding-top: 58px;
+  padding-bottom: 55px;
+  color: #ffffff;
+  grid-template-columns: 80px auto;
+  grid-template-rows: auto 1fr;
+  row-gap: 16px;
+  column-gap: 28px;
+  width: 560px;
+  margin: 0 auto;
+
+  @include vp-1199 {
+    width: 84%;
+    max-width: 566px;
+    padding: 62px 66px;
+    padding-right: 62px;
+    padding-bottom: 56px;
+    column-gap: 31px;
+  }
+
+  @include vp-767 {
+    padding: 35px 13%;
+    column-gap: 15px;
+    width: auto;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+
+    margin: 0;
+    grid-column: 2 / 3;
+
+    @include vp-767 {
+      line-height: 130%;
+      align-self: center;
+    }
+  }
+
+  &__information {
+    font-size: 16px;
+    line-height: 140%;
+
+    grid-column: 2 / 3;
+    margin: 0;
+
+    @include vp-1199 {
+      letter-spacing: 0.1px;
+    }
+
+    @include vp-767 {
+      grid-column: 2 span;
+      text-align: center;
+      letter-spacing: normal;
+    }
+  }
+
+  &__image-container {
+    display: block;
+    align-self: flex-start;
+    background-color: transparent;
+    margin-top: 5px;
+
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+
+    @include vp-767 {
+      grid-row: 1 / 2;
+      justify-self: flex-end;
+    }
+
+    & img {
+      object-fit: cover;
+      border-radius: 50%;
+
+      @include vp-767 {
+        width: 68px;
+        height: 68px;
+      }
+    }
+  }
+}
