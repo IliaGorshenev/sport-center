@@ -17,11 +17,19 @@
     width: 440px;
     height: 424px;
 
-    background-image: url("../img/price-rogue-image.png");
+    background-image: url("../../img/price-rogue-image.png");
     z-index: 1;
 
-    @media (min-resolution: 2dppx) {
+    @include retina-1199 {
       background-image: url("../img/price-rogue-image@2x.png");
+      background-size: 470px 494px;
+      background-repeat: no-repeat;
+    }
+
+    @include retina-767 {
+      background-image: url("../img/price-rogue-image@2x.png");
+      background-size: 425px 439px;
+      background-repeat: no-repeat;
     }
 
     @include vp-1199 {

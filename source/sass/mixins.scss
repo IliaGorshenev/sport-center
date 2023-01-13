@@ -1,17 +1,17 @@
 @mixin retina-767 {
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx), (max-width: 767px) {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     @content;
   }
 }
 
 @mixin retina {
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx), (max-width: 3000px) {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx), (min-width: 1200px) {
     @content;
   }
 }
 
 @mixin retina-1199 {
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx), (max-width: 1199px) {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx), (min-width: 768px) {
     @content;
   }
 }

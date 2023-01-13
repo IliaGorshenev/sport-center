@@ -62,8 +62,19 @@
     background-size: cover;
     background-position: left -20px center;
 
-    @media (min-resolution: 2dppx) {
+    @include retina {
       background-image: url("../img/promo-woman-desktop@2x.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: left -20px top;
+    }
+
+    @include retina-767 {
+      background-position: left -20px top;
+    }
+
+    @include retina-1199 {
+      background-position: left -20px top;
     }
 
     @include vp-1199 {
@@ -75,7 +86,7 @@
 
     @include vp-767 {
       width: 100%;
-      aspect-ratio: 95/100;
+      aspect-ratio: 91/100;
       height: auto;
 
       background-image: url("../img/promo-woman-mobile.jpg");
