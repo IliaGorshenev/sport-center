@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Описание проекта">
     <title>Fitnes-center</title>
+    <link rel="preload" href="fonts/AlumniSans-Thin.woff2" as="font">
+    <link rel="preload" href="fonts/AlumniSans-Black.woff2" as="font">
+    <link rel="preload" href="fonts/AlumniSans-Bold.woff2" as="font">
+    <link rel="preload" href="fonts/AlumniSans-ExtraLight.woff2" as="font">
+    <link rel="preload" href="fonts/AlumniSans-Light.woff2" as="font">
+    <link rel="preload" href="fonts/AlumniSans-Medium.woff2" as="font">
+    <link rel="preload" href="fonts/AlumniSans-Regular.woff2" as="font">
+    <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font">
+    <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font">
+    <link rel="preload" href="fonts/RobotoCondensed-Light.woff" as="font">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -26,9 +36,9 @@
             <h1 class="visually-hidden">фитнес центр SUPERGYM</h1>
             <p class="header__location">ОМСК</p>
             <div class="header__title-container">
-              <p class="header__title-additional-text">Тренажёрный зал<br>Групповые занятия<br>Кардио-зона</p>
+              <p class="header__title-additional-text">Тренажёрный зал Групповые занятия Кардио-зона</p>
               <p class="header__main-title">
-                Фитнес<br> центр
+                Фитнес центр
               </p>
             </div>
             <a href="#" class="header__button">купить абонемент</a>
@@ -60,7 +70,7 @@
             <div class="intro__image-wrapper">
             </div>
             <div class="intro__video-container">
-              <iframe class="intro__video" src="https://www.youtube.com/embed/9TZXsZItgdw" tabindex="-1" data-video title="Бесплатные интерактивные онлайн-курсы" allow="autoplay" allowfullscreen></iframe>
+              <iframe class="intro__video" src="#" tabindex="-1" data-video title="Бесплатные интерактивные онлайн-курсы"></iframe>
               <div class="intro__video-upper-layer" data-video-layer>
                 <a href="https://www.youtube.com/embed/9TZXsZItgdw" target="_blank" class="intro__video-button" data-video-button tabindex="0">
                   <svg class="intro__video-icon" width="17" height="17" role="img" aria-label="Произвести" xmlns="http://www.w3.org/2000/svg">
@@ -204,7 +214,7 @@
         <div class="game__wrapper">
           <article class="game__offer game-offer">
             <div class="game-offer__content">
-              <h2 class="game-offer__title">SUPER <br>GAMES</h2>
+              <h2 class="game-offer__title">SUPER GAMES</h2>
               <span class="game-offer__subtitle">Ежегодные соревнования по CrossFit</span>
               <dl class="game-offer__information-list">
                 <dt class="game-offer__term">
@@ -212,7 +222,10 @@
                 </dt>
                 <dd class="game-offer__definition">
                   <span class="game-offer__short-date">7</span>
-                  <span class="game-offer__long-date">Марта <br>2019</span>
+                  <span class="game-offer__long-date">
+                    <span>Марта </span>
+                    <span>2019</span>
+                  </span>
                 </dd>
                 <dt class="game-offer__term">
                   Время
@@ -226,7 +239,7 @@
             <div class="game-offer__image-container">
               <picture>
                 <source type="image/webp" srcset="img/game-offer-photo.webp 1x, img/game-offer-photo@2x.webp 2x">
-                <img src="img/game-offer-photo.jpg" srcset="img/game-offer-photo@2x.jpg" alt="Игра" class="game-offer__image">
+                <img src="img/game-offer-photo.jpg" srcset="img/game-offer-photo@2x.jpg" width="660" height="500" alt="Игра" class="game-offer__image">
               </picture>
             </div>
           </article>
@@ -250,7 +263,7 @@
                     <div class="instructor__image-container">
                       <picture>
                         <source type="image/webp" srcset="img/instructor-1.webp 1x, img/instructor-1@2x.webp 2x">
-                        <img src="img/instructor-1.jpg" srcset="img/instructor-1@2x.jpg" alt="Анна Павлова" class="instructor__image">
+                        <img src="img/instructor-1.jpg" srcset="img/instructor-1@2x.jpg" width="260" height="294" alt="Анна Павлова" class="instructor__image">
                       </picture>
                     </div>
                   </div>
@@ -267,7 +280,7 @@
                     <div class="instructor__image-container">
                       <picture>
                         <source type="image/webp" srcset="img/instructor-2.webp 1x, img/instructor-2@2x.webp 2x">
-                        <img src="img/instructor-2.jpg" srcset="img/instructor-2@2x.jpg" alt="Алексей Лавров" class="instructor__image">
+                        <img src="img/instructor-2.jpg" srcset="img/instructor-2@2x.jpg" width="260" height="294" alt="Алексей Лавров" class="instructor__image">
                       </picture>
                     </div>
                   </div>
@@ -284,7 +297,7 @@
                     <div class="instructor__image-container">
                       <picture>
                         <source type="image/webp" srcset="img/instructor-3.webp 1x, img/instructor-3@2x.webp 2x">
-                        <img src="img/instructor-3.jpg" srcset="img/instructor-3@2x.jpg" alt="Александр Пашков" class="instructor__image">
+                        <img src="img/instructor-3.jpg" srcset="img/instructor-3@2x.jpg" width="260" height="294" alt="Александр Пашков" class="instructor__image">
                       </picture>
                     </div>
                   </div>
@@ -301,7 +314,7 @@
                     <div class="instructor__image-container">
                       <picture>
                         <source type="image/webp" srcset="img/instructor-4.webp 1x, img/instructor-4@2x.webp 2x">
-                        <img src="img/instructor-4.jpg" srcset="img/instructor-4@2x.jpg" alt="Мария Кетова" class="instructor__image">
+                        <img src="img/instructor-4.jpg" srcset="img/instructor-4@2x.jpg" width="260" height="294" alt="Мария Кетова" class="instructor__image">
                       </picture>
                     </div>
                   </div>
@@ -432,7 +445,7 @@
                     <div class="comment__image-container">
                       <picture>
                         <source type="image/webp" srcset="img/comment-1.webp 1x, img/comment-1@2x.webp 2x">
-                        <img src="img/comment-1.jpg" srcset="img/comment-1@2x.jpg" alt="Анна Орлова" class="comment__image">
+                        <img src="img/comment-1.jpg" srcset="img/comment-1@2x.jpg" width="80" height="80" alt="Анна Орлова" class="comment__image">
                       </picture>
                     </div>
                   </div>
@@ -444,19 +457,19 @@
                     <div class="comment__image-container">
                       <picture>
                         <source type="image/webp" srcset="img/comment-1.webp 1x, img/comment-1@2x.webp 2x">
-                        <img src="img/comment-1.jpg" srcset="img/comment-1@2x.jpg" alt="Анна Орлова" class="comment__image">
+                        <img src="img/comment-1.jpg" srcset="img/comment-1@2x.jpg" width="80" height="80" alt="Александр Пашков" class="comment__image">
                       </picture>
                     </div>
                   </div>
                 </div>
                 <div class="comments__slide swiper-slide">
                   <div class="comment">
-                    <h3 class="comment__title">Владимир Пашков</h3>
+                    <h3 class="comment__title">Владимир Романов</h3>
                     <span class="comment__information">&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</span>
                     <div class="comment__image-container">
                       <picture>
                         <source type="image/webp" srcset="img/comment-1.webp 1x, img/comment-1@2x.webp 2x">
-                        <img src="img/comment-1.jpg" srcset="img/comment-1@2x.jpg" alt="Анна Орлова" class="comment__image">
+                        <img src="img/comment-1.jpg" srcset="img/comment-1@2x.jpg" width="80" height="80" alt="Владимир Романов" class="comment__image">
                       </picture>
                     </div>
                   </div>
@@ -481,12 +494,18 @@
           <div class="feedback__wrapper">
             <h2 class="feedback__title">Бесплатное занятие</h2>
             <form method="post" action="https://echo.htmlacademy.ru/">
-              <fieldset class="form__item">
+              <fieldset>
                 <h3 class="visually-hidden">КОНТАКТНАЯ ИНФОРМАЦИЯ</h3>
-                <input placeholder="Имя" name="name" type="text" required>
-                <input name="tel" placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" data-phone-pattern='+_ (___) ___-__-__' data-phone-clear='false' type="tel" required>
+                <label>
+                  <input placeholder="Имя" name="name" type="text" required>
+                  <span class="visually-hidden">Имя</span>
+                </label>
+                <label>
+                  <input name="tel" placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" data-phone-pattern='+_ (___) ___-__-__' data-phone-clear='false' type="tel" required>
+                  <span class="visually-hidden">Телефон</span>
+                </label>
               </fieldset>
-              <button class="form__button button" tabindex="0" type="submit">ОТПРАВИТЬ</button>
+              <button tabindex="0" type="submit">ОТПРАВИТЬ</button>
             </form>
           </div>
         </section>
@@ -568,7 +587,6 @@
         </ul>
       </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>

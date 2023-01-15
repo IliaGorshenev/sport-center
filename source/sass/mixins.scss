@@ -1,5 +1,5 @@
 @mixin retina-767 {
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx), (min-width: 300px) {
     @content;
   }
 }

@@ -62,26 +62,17 @@
     background-size: cover;
     background-position: left -20px center;
 
-    @include retina {
-      background-image: url("../img/promo-woman-desktop@2x.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: left -20px top;
-    }
-
-    @include retina-767 {
-      background-position: left -20px top;
-    }
-
-    @include retina-1199 {
-      background-position: left -20px top;
-    }
-
     @include vp-1199 {
       width: 59%;
 
       background-image: url("../img/promo-woman-tablet.jpg");
       background-position: left top;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../img/promo-woman-tablet@2x.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
     }
 
     @include vp-767 {
@@ -90,6 +81,19 @@
       height: auto;
 
       background-image: url("../img/promo-woman-mobile.jpg");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../img/promo-woman-mobile@2x.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx), (min-width: 1200px) {
+      background-image: url("../img/promo-woman-desktop@2x.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: left -20px top;
     }
   }
 

@@ -1,5 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import Swiper from 'swiper';
+import { Navigation } from 'swiper';
 
 const PRICE_BUTTONS = document.querySelectorAll('[data-price-button]');
 const PRICE_LISTS = document.querySelectorAll('[data-price-list]');
@@ -74,7 +76,7 @@ const VIDEO_LAYER = document.querySelector('[data-video-layer]');
 PLAYER.addEventListener('click', function (evt) {
   evt.preventDefault();
   IFRAME.setAttribute('src', 'https://www.youtube.com/embed/9TZXsZItgdw?autoplay=1&mute=1');
-  VIDEO_LAYER.remove();
+  setTimeout(() => VIDEO_LAYER.remove(), 300);
 });
 
 const breakpointChecker = () => {
@@ -83,6 +85,8 @@ const breakpointChecker = () => {
       loop: true,
       slidesPerView: 4,
       spaceBetween: 3.1 + '%',
+      modules: [Navigation],
+
       navigation: {
         nextEl: '.swiper-button-next--1',
         prevEl: '.swiper-button-prev--1',
@@ -93,6 +97,8 @@ const breakpointChecker = () => {
       loop: true,
       slidesPerView: 3,
       spaceBetween: 3 + '%',
+      modules: [Navigation],
+
       navigation: {
         nextEl: '.swiper-button-next--1',
         prevEl: '.swiper-button-prev--1',
@@ -103,6 +109,8 @@ const breakpointChecker = () => {
       loop: true,
       slidesPerView: 2,
       spaceBetween: 5 + '%',
+      modules: [Navigation],
+
       navigation: {
         nextEl: '.swiper-button-next--1',
         prevEl: '.swiper-button-prev--1',
@@ -113,6 +121,8 @@ const breakpointChecker = () => {
       loop: true,
       slidesPerView: 1,
       spaceBetween: 0,
+      modules: [Navigation],
+
       navigation: {
         nextEl: '.swiper-button-next--1',
         prevEl: '.swiper-button-prev--1',
@@ -135,6 +145,8 @@ const swiper2 = new Swiper('.swiper--2', {
     releaseOnEdges: true,
     sensitivity: 0,
   },
+
+  modules: [Navigation],
 
   navigation: {
     nextEl: '.swiper-button-next--2',
