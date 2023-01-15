@@ -1,7 +1,10 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import Swiper from 'swiper';
-import { Navigation } from 'swiper';
+import {Navigation} from 'swiper';
+
+document.querySelector(".swiper--no-js--1").classList.remove("swiper--no-js--1");
+document.querySelector(".swiper--no-js--2").classList.remove("swiper--no-js--2");
 
 const PRICE_BUTTONS = document.querySelectorAll('[data-price-button]');
 const PRICE_LISTS = document.querySelectorAll('[data-price-list]');

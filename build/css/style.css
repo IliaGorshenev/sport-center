@@ -3023,6 +3023,44 @@ main {
   display: none;
 }
 
+.swiper--no-js--1 > .swiper-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 20px;
+  -webkit-column-gap: 3%;
+  -moz-column-gap: 3%;
+  column-gap: 3%;
+}
+
+.swiper--no-js--1 ~ .swiper-button-prev {
+  display: none;
+}
+
+.swiper--no-js--1 ~ .swiper-button-next {
+  display: none;
+}
+
+.swiper--no-js--2 .swiper-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.swiper--no-js--2 ~ .swiper-button-prev {
+  display: none;
+}
+
+.swiper--no-js--2 ~ .swiper-button-next {
+  display: none;
+}
+
 .comments__wrapper {
   position: relative;
   display: -webkit-box;
@@ -4076,6 +4114,14 @@ form button:hover {
     right: -10.7%;
   }
 
+  .swiper--no-js--1 > .swiper-wrapper {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 3%;
+    -moz-column-gap: 3%;
+    column-gap: 3%;
+  }
+
   .comments__wrapper {
     padding: 9px 5.8%;
     padding-bottom: 97px;
@@ -4191,6 +4237,7 @@ form button:hover {
 
   .intro__image-wrapper {
     background-image: url("../img/sport-center-main-photo-tablet@2x.jpg");
+    background-size: 678px 345px;
     background-position: center;
     background-repeat: no-repeat;
   }
@@ -4691,6 +4738,14 @@ form button:hover {
 
   .swiper-button-next--2 {
     right: 1%;
+  }
+
+  .swiper--no-js--1 > .swiper-wrapper {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -webkit-column-gap: 3%;
+    -moz-column-gap: 3%;
+    column-gap: 3%;
   }
 
   .comments__wrapper {
