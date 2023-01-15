@@ -20,28 +20,28 @@
     background-image: url("../../img/price-rogue-image.png");
     z-index: 1;
 
-    @include retina-1199 {
-      background-image: url("../img/price-rogue-image@2x.png");
-      background-size: 470px 494px;
-      background-repeat: no-repeat;
-    }
-
-    @include retina-767 {
-      background-image: url("../img/price-rogue-image@2x.png");
-      background-size: 425px 439px;
-      background-repeat: no-repeat;
-    }
-
     @include vp-1199 {
       width: 389px;
       height: 365px;
       transform: translateX(38px);
       background-repeat: no-repeat;
       background-size: 425px 439px;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../img/price-rogue-image@2x.png");
+        background-size: 425px 439px;
+        background-repeat: no-repeat;
+      }
     }
 
     @include vp-767 {
       display: none;
+    }
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx), (min-width: 1200px) {
+      background-image: url("../img/price-rogue-image@2x.png");
+      background-size: 470px 494px;
+      background-repeat: no-repeat;
     }
   }
 
