@@ -11,7 +11,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(396px);
-    bottom: 0;
+    bottom: -5px;
 
     content: "";
     width: 440px;
@@ -25,6 +25,7 @@
       height: 365px;
       transform: translateX(38px);
       background-repeat: no-repeat;
+      bottom: 0;
       background-size: 425px 439px;
 
       @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -56,12 +57,12 @@
     max-width: 1160px;
 
     @include vp-1199 {
-      padding: 100px 5.8%;
+      padding: 103px 5.8%;
       padding-bottom: 115px;
     }
 
     @include vp-767 {
-      padding: 67px 4.6%;
+      padding: 65px 4.6%;
       padding-bottom: 80px;
     }
   }
@@ -112,7 +113,7 @@
 
     @include vp-767 {
       column-gap: 43px;
-      margin-bottom: 40px;
+      margin-bottom: 36px;
     }
 
     &::after {
@@ -211,7 +212,7 @@
 
     @include vp-767 {
       width: 100%;
-      margin-bottom: 26px;
+      margin-bottom: 25px;
     }
   }
 }

@@ -1849,6 +1849,11 @@ main {
   color: #030a1a;
 }
 
+.intro {
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
 .intro__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2001,7 +2006,7 @@ main {
   -webkit-transform: translateX(396px);
   -ms-transform: translateX(396px);
   transform: translateX(396px);
-  bottom: 0;
+  bottom: -5px;
   content: "";
   width: 440px;
   height: 424px;
@@ -2370,7 +2375,7 @@ main {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
   margin: 0 auto;
-  padding: 43px 7.5%;
+  padding: 48px 7.5%;
   padding-bottom: 53px;
   max-width: 1160px;
 }
@@ -2564,7 +2569,7 @@ main {
   -ms-flex-direction: column;
   flex-direction: column;
   margin: 0 auto;
-  padding: 10px 5.5%;
+  padding: 8px 5.5%;
   padding-bottom: 103px;
   max-width: 1160px;
 }
@@ -2647,7 +2652,7 @@ main {
   height: 2px;
   width: 100%;
   position: absolute;
-  bottom: -84px;
+  bottom: -72px;
   background: rgba(209, 10, 66, 0.2);
 }
 
@@ -2700,7 +2705,7 @@ main {
   flex-direction: column;
   -ms-grid-row-align: center;
   align-self: center;
-  padding: 55px 25px;
+  padding: 55px 27px;
   height: 95%;
   padding-right: 12px;
   -ms-grid-column: 2;
@@ -2721,6 +2726,8 @@ main {
   line-height: 65px;
   letter-spacing: 0.03em;
   text-align: center;
+  position: relative;
+  left: 3px;
 }
 
 .advantages__item-title {
@@ -2935,6 +2942,11 @@ main {
   margin: 0;
 }
 
+.main-promo__subtitle {
+  margin-top: 11px;
+  font-size: 18px;
+}
+
 .main-promo__title-name {
   font-weight: 700;
   font-size: 28px;
@@ -3079,8 +3091,8 @@ main {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
   margin: 0 auto;
-  padding: 60px 10px;
-  padding-bottom: 120px;
+  padding: 58px 10px;
+  padding-bottom: 121px;
   max-width: 672px;
 }
 
@@ -3221,10 +3233,10 @@ main {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
   margin: 0 auto;
-  padding-top: 60px;
+  padding-top: 57px;
   padding-right: 14.6%;
-  padding-left: 17.6%;
-  padding-bottom: 59px;
+  padding-left: 17.9%;
+  padding-bottom: 64px;
   max-width: 1160px;
 }
 
@@ -3249,7 +3261,7 @@ main {
   -webkit-column-gap: 120px;
   -moz-column-gap: 120px;
   column-gap: 120px;
-  row-gap: 15px;
+  row-gap: 17px;
   padding: 0;
   margin: 0;
   margin-right: auto;
@@ -3622,10 +3634,10 @@ form button:hover {
   }
 
   .main-promo__image-container {
-    background-image: url("../img/promo-woman-desktop@2x.jpg");
+    background-image: url("../../img/promo-woman-desktop@2x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: left -20px top;
+    background-position: left top;
   }
 }
 
@@ -3730,7 +3742,7 @@ form button:hover {
     -ms-flex-direction: column;
     flex-direction: column;
     padding: 0 5.8%;
-    padding-top: 100px;
+    padding-top: 102px;
     padding-bottom: 183px;
   }
 
@@ -3824,11 +3836,12 @@ form button:hover {
     -ms-transform: translateX(38px);
     transform: translateX(38px);
     background-repeat: no-repeat;
+    bottom: 0;
     background-size: 425px 439px;
   }
 
   .price__wrapper {
-    padding: 100px 5.8%;
+    padding: 103px 5.8%;
     padding-bottom: 115px;
   }
 
@@ -3975,13 +3988,13 @@ form button:hover {
   .advantages__list {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    -webkit-column-gap: 7.6%;
-    -moz-column-gap: 7.6%;
-    column-gap: 7.6%;
+    -webkit-column-gap: 7.4%;
+    -moz-column-gap: 7.4%;
+    column-gap: 7.4%;
     margin-bottom: 40px;
     -ms-grid-rows: auto auto;
     grid-template-rows: auto auto;
-    row-gap: 40px;
+    row-gap: 42px;
   }
 
   .advantages__item {
@@ -4044,7 +4057,8 @@ form button:hover {
     grid-row: 2/3;
     height: auto;
     min-height: 239px;
-    padding: 30px 125px;
+    padding: 32px 125px;
+    padding-left: 120px;
     padding-bottom: 5px;
     width: 64%;
     -ms-grid-column-align: center;
@@ -4074,16 +4088,20 @@ form button:hover {
   }
 
   .advantages__definition-part--center {
+    left: 0;
     font-size: 22px;
     margin-bottom: 0;
   }
 
   .promotion__wrapper {
-    padding: 103px 5.8%;
+    padding: 100px 5.8%;
     padding-bottom: 82px;
   }
 
   .promotion__title {
+    position: relative;
+    bottom: 2px;
+    left: -2px;
     font-size: 42px;
     line-height: 50px;
     margin-bottom: 37px;
@@ -4133,23 +4151,24 @@ form button:hover {
 
   .comments__wrapper {
     padding: 9px 5.8%;
-    padding-bottom: 97px;
+    padding-bottom: 100px;
   }
 
   .comments__title {
     font-size: 42px;
     line-height: 50px;
+    margin-bottom: 40px;
   }
 
   .comment {
     width: 84%;
     max-width: 566px;
-    padding: 62px 66px;
+    padding: 59px 66px;
     padding-right: 62px;
     padding-bottom: 56px;
-    -webkit-column-gap: 31px;
-    -moz-column-gap: 31px;
-    column-gap: 31px;
+    -webkit-column-gap: 29px;
+    -moz-column-gap: 29px;
+    column-gap: 29px;
   }
 
   .comment__information {
@@ -4175,10 +4194,11 @@ form button:hover {
   .feedback__title {
     font-size: 42px;
     line-height: 50px;
+    margin-bottom: 30px;
   }
 
   .contacts__wrapper {
-    padding: 62px 17.8%;
+    padding: 62px 17.6%;
     padding-bottom: 67px;
   }
 
@@ -4219,6 +4239,10 @@ form button:hover {
     -webkit-column-gap: 11.3%;
     -moz-column-gap: 11.3%;
     column-gap: 11.3%;
+  }
+
+  form button {
+    padding: 15px 0;
   }
 
   .footer__logo {
@@ -4298,7 +4322,7 @@ form button:hover {
   }
 
   .header__top-part {
-    padding: 20px 0;
+    padding: 25px 0;
     padding-top: 11px;
   }
 
@@ -4358,6 +4382,7 @@ form button:hover {
     -webkit-transform: none;
     -ms-transform: none;
     transform: none;
+    padding: 20px 0;
   }
 
   .intro__wrapper {
@@ -4407,7 +4432,7 @@ form button:hover {
 
   .intro__image-wrapper {
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 39px;
     height: 313px;
     background-size: cover;
     background-position: right center;
@@ -4424,7 +4449,7 @@ form button:hover {
   }
 
   .price__wrapper {
-    padding: 67px 4.6%;
+    padding: 65px 4.6%;
     padding-bottom: 80px;
   }
 
@@ -4438,7 +4463,7 @@ form button:hover {
     -webkit-column-gap: 43px;
     -moz-column-gap: 43px;
     column-gap: 43px;
-    margin-bottom: 40px;
+    margin-bottom: 36px;
   }
 
   .price__period-link-title {
@@ -4448,7 +4473,7 @@ form button:hover {
 
   .price__card-item {
     width: 100%;
-    margin-bottom: 26px;
+    margin-bottom: 25px;
   }
 
   .card {
@@ -4564,7 +4589,7 @@ form button:hover {
   .instructors__title {
     font-size: 32px;
     line-height: 38px;
-    margin-bottom: 38px;
+    margin-bottom: 40px;
   }
 
   .instructors__wrapper {
@@ -4579,7 +4604,7 @@ form button:hover {
 
   .advantages__wrapper {
     padding: 0;
-    padding-top: 35px;
+    padding-top: 37px;
     padding-bottom: 26px;
   }
 
@@ -4659,17 +4684,18 @@ form button:hover {
   }
 
   .promotion__wrapper {
-    padding: 60px 4.6%;
+    padding: 64px 4.6%;
     padding-bottom: 40px;
   }
 
   .promotion__title {
+    margin-bottom: 40px;
     font-size: 32px;
     line-height: 38px;
   }
 
   .promotion__item {
-    margin-bottom: 26px;
+    margin-bottom: 29px;
   }
 
   .promotion__list {
@@ -4712,6 +4738,10 @@ form button:hover {
     text-align: center;
   }
 
+  .main-promo__title-number {
+    margin-bottom: 27px;
+  }
+
   .main-promo__content {
     width: 100%;
     text-align: center;
@@ -4719,7 +4749,7 @@ form button:hover {
 
   .main-promo__image-container {
     width: 100%;
-    aspect-ratio: 91/100;
+    aspect-ratio: 97/100;
     height: auto;
     background-image: url("../img/promo-woman-mobile.jpg");
   }
@@ -4766,7 +4796,7 @@ form button:hover {
   .comments__title {
     font-size: 32px;
     line-height: 38px;
-    margin-bottom: 41px;
+    margin-bottom: 39px;
   }
 
   .comments__inner-container {
@@ -4775,6 +4805,7 @@ form button:hover {
 
   .comment {
     padding: 35px 13%;
+    padding-bottom: 33px;
     -webkit-column-gap: 15px;
     -moz-column-gap: 15px;
     column-gap: 15px;
@@ -4786,6 +4817,7 @@ form button:hover {
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
+    margin-top: 4px;
   }
 
   .comment__information {
@@ -4808,7 +4840,7 @@ form button:hover {
   }
 
   .feedback__wrapper {
-    padding: 65px 4.6%;
+    padding: 63px 4.6%;
     padding-bottom: 70px;
   }
 
@@ -4817,6 +4849,7 @@ form button:hover {
     line-height: 38px;
     font-weight: 600;
     letter-spacing: 1px;
+    margin-bottom: 28px;
   }
 
   .contacts__wrapper {
@@ -4928,9 +4961,6 @@ form button:hover {
     text-align: left;
     margin-top: 4px;
     margin-bottom: 0;
-  }
-
-  .footer__navigation-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4942,7 +4972,7 @@ form button:hover {
 
   .footer__navigation-list--right-column {
     margin: 0;
-    margin-top: -5px;
+    margin-top: -2px;
   }
 
   .footer__social-list {
@@ -4966,12 +4996,12 @@ form button:hover {
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
   .intro__video-upper-layer {
-    background-image: url("../img/intro-video-desktop@2x.jpg");
+    background-image: url("../img/intro-video-mobile@2x.jpg");
     background-size: cover;
   }
 
   .intro__image-wrapper {
-    background-image: url("../img/sport-center-main-photo-tablet@2x.jpg");
+    background-image: url("../img/sport-center-main-photo-mobile@2x.jpg");
     background-position: right top;
   }
 

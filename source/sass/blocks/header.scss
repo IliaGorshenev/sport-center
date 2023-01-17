@@ -45,7 +45,7 @@
     }
 
     @include vp-767 {
-      padding: 20px 0;
+      padding: 25px 0;
       padding-top: 11px;
     }
   }
@@ -288,6 +288,8 @@
     @include vp-767 {
       width: 100%;
       transform: none;
+
+      padding: 20px 0;
     }
 
     &:hover {

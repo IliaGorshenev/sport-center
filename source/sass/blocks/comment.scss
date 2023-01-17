@@ -17,14 +17,15 @@
   @include vp-1199 {
     width: 84%;
     max-width: 566px;
-    padding: 62px 66px;
+    padding: 59px 66px;
     padding-right: 62px;
     padding-bottom: 56px;
-    column-gap: 31px;
+    column-gap: 29px;
   }
 
   @include vp-767 {
     padding: 35px 13%;
+    padding-bottom: 33px;
     column-gap: 15px;
     width: auto;
   }
@@ -39,6 +40,7 @@
     @include vp-767 {
       line-height: 130%;
       align-self: center;
+      margin-top: 4px;
     }
   }
 

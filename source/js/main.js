@@ -111,7 +111,7 @@ const breakpointChecker = () => {
     const swiper1 = new Swiper('.swiper--1', {
       loop: true,
       slidesPerView: 2,
-      spaceBetween: 5 + '%',
+      spaceBetween: 5.6 + '%',
       modules: [Navigation],
 
       navigation: {

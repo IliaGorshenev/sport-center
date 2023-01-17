@@ -1,4 +1,7 @@
 .intro {
+  max-width: 1366px;
+  margin: 0 auto;
+
   &__wrapper {
     display: flex;
     flex-direction: row;
@@ -15,7 +18,7 @@
     @include vp-1199 {
       flex-direction: column;
       padding: 0 5.8%;
-      padding-top: 100px;
+      padding-top: 102px;
       padding-bottom: 183px;
     }
 
@@ -140,7 +143,7 @@
       background-size: cover;
 
       @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-        background-image: url("../img/intro-video-desktop@2x.jpg");
+        background-image: url("../img/intro-video-mobile@2x.jpg");
         background-size: cover;
       }
     }
@@ -191,14 +194,14 @@
 
     @include vp-767 {
       width: 100%;
-      margin-bottom: 40px;
+      margin-bottom: 39px;
       height: 313px;
       background-size: cover;
       background-position: right center;
       background-image: url("../img/sport-center-main-photo-mobile.jpg");
 
       @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-        background-image: url("../img/sport-center-main-photo-tablet@2x.jpg");
+        background-image: url("../img/sport-center-main-photo-mobile@2x.jpg");
         background-position: right top;
       }
     }

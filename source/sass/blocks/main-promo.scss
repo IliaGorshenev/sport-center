@@ -23,6 +23,11 @@
     }
   }
 
+  &__subtitle {
+    margin-top: 11px;
+    font-size: 18px;
+  }
+
   &__title-name {
     font-weight: 700;
     font-size: 28px;
@@ -34,6 +39,10 @@
     font-weight: 700;
     font-size: 70px;
     margin-bottom: 30px;
+
+    @include vp-767 {
+      margin-bottom: 27px;
+    }
   }
 
   &__content {
@@ -77,7 +86,7 @@
 
     @include vp-767 {
       width: 100%;
-      aspect-ratio: 91/100;
+      aspect-ratio: 97/100;
       height: auto;
 
       background-image: url("../img/promo-woman-mobile.jpg");
@@ -90,10 +99,10 @@
     }
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx), (min-width: 1200px) {
-      background-image: url("../img/promo-woman-desktop@2x.jpg");
+      background-image: url("../../img/promo-woman-desktop@2x.jpg");
       background-repeat: no-repeat;
       background-size: cover;
-      background-position: left -20px top;
+      background-position: left top;
     }
   }
 

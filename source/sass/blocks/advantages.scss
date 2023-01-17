@@ -19,7 +19,7 @@
 
     @include vp-767 {
       padding: 0;
-      padding-top: 35px;
+      padding-top: 37px;
       padding-bottom: 26px;
     }
   }
@@ -38,10 +38,10 @@
 
     @include vp-1199 {
       grid-template-columns: 1fr 1fr;
-      column-gap: 7.6%;
+      column-gap: 7.4%;
       margin-bottom: 40px;
       grid-template-rows: auto auto;
-      row-gap: 40px;
+      row-gap: 42px;
     }
 
     @include vp-767 {
@@ -83,7 +83,7 @@
         height: 2px;
         width: 100%;
         position: absolute;
-        bottom: -84px;
+        bottom: -72px;
         background: rgba(209, 10, 66, 0.2);
       }
 
@@ -148,7 +148,7 @@
       display: flex;
       flex-direction: column;
       align-self: center;
-      padding: 55px 25px;
+      padding: 55px 27px;
       height: 95%;
       padding-right: 12px;
       grid-column-start: 2;
@@ -167,7 +167,8 @@
 
         height: auto;
         min-height: 239px;
-        padding: 30px 125px;
+        padding: 32px 125px;
+        padding-left: 120px;
         padding-bottom: 5px;
         width: 64%;
         justify-self: center;
@@ -192,6 +193,9 @@
     line-height: 65px;
     letter-spacing: 0.03em;
     text-align: center;
+
+    position: relative;
+    left: 3px;
 
     @include vp-1199 {
       position: relative;
@@ -311,6 +315,8 @@
       margin-bottom: 23px;
 
       @include vp-1199 {
+        left: 0;
+
         font-size: 22px;
         margin-bottom: 0;
       }
