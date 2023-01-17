@@ -1990,6 +1990,8 @@ main {
 .intro__media-content-container {
   position: relative;
   width: 62%;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
 }
 
 .price {

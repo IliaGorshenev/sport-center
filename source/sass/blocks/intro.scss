@@ -285,6 +285,8 @@
     position: relative;
     width: 62%;
 
+    align-self: flex-start;
+
     @include vp-1199 {
       width: 100%;
       margin: 0 auto;
