@@ -1561,14 +1561,14 @@ body {
   font-weight: 300;
   font-size: 16px;
   line-height: 150%;
-  min-height: 100%;
+  min-height: 100vh;
   color: #102654;
 }
 
 main {
-  -webkit-box-flex: 3;
-  -ms-flex-positive: 3;
-  flex-grow: 3;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 
 .btn {
@@ -1731,6 +1731,10 @@ main {
   max-width: 1160px;
 }
 
+.header__link + .header__link {
+  margin-left: 5px;
+}
+
 .header__top-part {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1739,6 +1743,8 @@ main {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1783,7 +1789,7 @@ main {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding-top: 56px;
+  padding-top: 51px;
   width: 377px;
   margin-left: 1.7%;
   margin-right: 5.5%;
@@ -2088,7 +2094,7 @@ main {
   width: 100%;
   bottom: 0;
   height: 2px;
-  background-color: rgba(16, 38, 84, 0.5);
+  background-color: rgba(120, 120, 120, 0.2);
 }
 
 .price__period-item {
@@ -2119,6 +2125,7 @@ main {
 .price__period-link-title {
   font-size: 20px;
   line-height: 100%;
+  font-weight: 400;
 }
 
 .price__card-list {
@@ -2584,7 +2591,6 @@ main {
 
 .instructors__wrapper {
   position: relative;
-  overflow: visible;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
   display: -webkit-box;
@@ -2608,6 +2614,7 @@ main {
 
 .instructors__slide {
   min-height: 294px;
+  aspect-ratio: 88.4/100;
 }
 
 .advantages {
@@ -2664,6 +2671,7 @@ main {
 }
 
 .advantages__item--top-right {
+  padding-right: 5px;
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3/4;
@@ -3105,6 +3113,14 @@ main {
   display: none;
 }
 
+.swiper-slide {
+  height: 1px;
+}
+
+.swiper-slide-active {
+  height: auto;
+}
+
 .comments__wrapper {
   position: relative;
   display: -webkit-box;
@@ -3429,6 +3445,8 @@ form button:hover {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   background-color: #030a1a;
 }
 
@@ -3558,6 +3576,10 @@ form button:hover {
   z-index: -1;
 }
 
+.instructor:focus .instructor__content-container {
+  padding-top: 54px;
+}
+
 .instructor:hover .instructor__title {
   position: static;
   -webkit-transform: none;
@@ -3567,6 +3589,10 @@ form button:hover {
 
 .instructor:hover .instructor__image-container {
   z-index: -1;
+}
+
+.instructor:hover .instructor__content-container {
+  padding-top: 54px;
 }
 
 .instructor__wrapper {
@@ -3582,9 +3608,7 @@ form button:hover {
   min-height: 294px;
   height: 100%;
   background: rgba(16, 38, 84, 0.89);
-  padding: 54px 19%;
-  padding-left: 17%;
-  padding-bottom: 25px;
+  padding: 0;
 }
 
 .instructor__title {
@@ -3625,9 +3649,24 @@ form button:hover {
   font-size: 170%;
 }
 
+.instructor__content-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: scroll;
+  padding: 78px 19%;
+  padding-left: 17%;
+  padding-bottom: 25px;
+}
+
 .instructor__image-container {
+  overflow: visible;
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -3685,7 +3724,7 @@ form button:hover {
 
   .header__top-part {
     padding: 20px 0;
-    padding-top: 25px;
+    padding-top: 40px;
   }
 
   .header__logo {
@@ -3883,7 +3922,6 @@ form button:hover {
     -webkit-column-gap: 54px;
     -moz-column-gap: 54px;
     column-gap: 54px;
-    right: -2px;
     margin-bottom: 42px;
   }
 
@@ -4146,7 +4184,7 @@ form button:hover {
   }
 
   .main-promo {
-    height: 462px;
+    min-height: 462px;
   }
 
   .main-promo__content {
@@ -4155,6 +4193,7 @@ form button:hover {
 
   .main-promo__image-container {
     width: 59%;
+    aspect-ratio: 86.3/100;
     background-image: url("../img/promo-woman-tablet.jpg");
     background-position: left top;
   }
@@ -4183,7 +4222,7 @@ form button:hover {
   .comments__title {
     font-size: 42px;
     line-height: 50px;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
   }
 
   .comment {
@@ -4349,7 +4388,7 @@ form button:hover {
 
   .header__top-part {
     padding: 25px 0;
-    padding-top: 11px;
+    padding-top: 14px;
   }
 
   .header__logo {
@@ -4374,8 +4413,10 @@ form button:hover {
   }
 
   .header__location {
-    font-size: 28px;
+    font-size: 24px;
+    letter-spacing: 1px;
     line-height: 34px;
+    margin-right: 4px;
     margin-bottom: 12px;
   }
 
@@ -4386,13 +4427,14 @@ form button:hover {
 
   .header__main-title {
     width: auto;
+    margin-right: 3px;
     margin-left: 140px;
   }
 
   .header__title-additional-text {
     top: auto;
-    bottom: 17px;
-    left: 14px;
+    bottom: 32px;
+    left: -2px;
     right: auto;
     -webkit-transform: none;
     -ms-transform: none;
@@ -4432,7 +4474,7 @@ form button:hover {
 
   .intro__text {
     padding-right: 29px;
-    margin-bottom: 35px;
+    margin-bottom: 33px;
   }
 
   .intro__information {
@@ -4448,12 +4490,13 @@ form button:hover {
 
   .intro__video-container {
     position: relative;
+    aspect-ratio: 100/52;
     left: auto;
     -webkit-transform: none;
     -ms-transform: none;
     transform: none;
     min-width: 100%;
-    height: 167px;
+    height: auto;
   }
 
   .intro__image-wrapper {
@@ -4486,9 +4529,11 @@ form button:hover {
   }
 
   .price__period-list {
-    -webkit-column-gap: 43px;
-    -moz-column-gap: 43px;
-    column-gap: 43px;
+    position: relative;
+    left: -2px;
+    -webkit-column-gap: 44.5px;
+    -moz-column-gap: 44.5px;
+    column-gap: 44.5px;
     margin-bottom: 36px;
   }
 
@@ -4499,7 +4544,7 @@ form button:hover {
 
   .price__card-item {
     width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 23px;
   }
 
   .card {
@@ -4567,7 +4612,7 @@ form button:hover {
   }
 
   .game__wrapper {
-    padding: 30px 4.8%;
+    padding: 35px 4.8%;
     padding-right: 5.1%;
     padding-bottom: 5px;
   }
@@ -4619,7 +4664,7 @@ form button:hover {
   }
 
   .instructors__wrapper {
-    padding: 30px 14.6%;
+    padding: 32px 14.6%;
     padding-bottom: 70px;
   }
 
@@ -4664,10 +4709,10 @@ form button:hover {
     min-height: auto;
     width: 100%;
     position: static;
-    padding: 41px 16.8%;
-    padding-bottom: 20px;
+    padding: 39px 16.8%;
+    padding-bottom: 25px;
     margin-top: 5px;
-    margin-bottom: 45px;
+    margin-bottom: 43px;
   }
 
   .advantages__title {
@@ -4699,7 +4744,7 @@ form button:hover {
   }
 
   .advantages__definition-part--center {
-    margin-top: -10px;
+    margin-top: -12px;
     left: 0;
   }
 
@@ -5013,9 +5058,21 @@ form button:hover {
     margin: 0;
   }
 
+  .instructor:focus .instructor__content-container {
+    padding-top: 45px;
+  }
+
+  .instructor:hover .instructor__content-container {
+    padding-top: 45px;
+  }
+
   .instructor__wrapper {
     min-height: 274px;
-    padding: 45px 10%;
+  }
+
+  .instructor__content-container {
+    min-height: 274px;
+    padding: 60px 10%;
     padding-bottom: 20px;
   }
 }

@@ -32,7 +32,6 @@
 
   &__wrapper {
     position: relative;
-    overflow: visible;
 
     box-sizing: content-box;
     display: flex;
@@ -50,7 +49,7 @@
     }
 
     @include vp-767 {
-      padding: 30px 14.6%;
+      padding: 32px 14.6%;
       padding-bottom: 70px;
     }
   }
@@ -61,9 +60,10 @@
 
   &__slide {
     min-height: 294px;
+    aspect-ratio: 88.4 / 100;
 
     @include vp-767 {
-      aspect-ratio: 82/100;
+      aspect-ratio: 82 / 100;
       min-height: 274px;
     }
   }

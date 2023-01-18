@@ -69,10 +69,6 @@ const validatePhone = function () {
   }
 };
 
-const DESKTOP_BREAKPOINT = window.matchMedia(`(min-width: 1199px)`);
-const TABLET_BRAKEPOINT = window.matchMedia(`(min-width: 980px)`);
-const MOBILE_BREAKPOINT = window.matchMedia(`(min-width: 767px)`);
-
 const PLAYER = document.querySelector('[data-video-button]');
 const IFRAME = document.querySelector('[data-video]');
 const VIDEO_LAYER = document.querySelector('[data-video-layer]');
@@ -82,62 +78,37 @@ PLAYER.addEventListener('click', function (evt) {
   setTimeout(() => VIDEO_LAYER.remove(), 300);
 });
 
-const breakpointChecker = () => {
-  if (DESKTOP_BREAKPOINT.matches) {
-    const swiper1 = new Swiper('.swiper--1', {
-      loop: true,
-      slidesPerView: 4,
-      spaceBetween: 3.1 + '%',
-      modules: [Navigation],
+const swiper1 = new Swiper('.swiper--1', {
+  loop: true,
+  modules: [Navigation],
 
-      navigation: {
-        nextEl: '.swiper-button-next--1',
-        prevEl: '.swiper-button-prev--1',
-      },
-    });
-  } else if (TABLET_BRAKEPOINT.matches) {
-    const swiper1 = new Swiper('.swiper--1', {
-      loop: true,
-      slidesPerView: 3,
-      spaceBetween: 3 + '%',
-      modules: [Navigation],
+  navigation: {
+    nextEl: '.swiper-button-next--1',
+    prevEl: '.swiper-button-prev--1',
+  },
 
-      navigation: {
-        nextEl: '.swiper-button-next--1',
-        prevEl: '.swiper-button-prev--1',
-      },
-    });
-  } else if (MOBILE_BREAKPOINT.matches) {
-    const swiper1 = new Swiper('.swiper--1', {
-      loop: true,
-      slidesPerView: 2,
-      spaceBetween: 5.6 + '%',
-      modules: [Navigation],
-
-      navigation: {
-        nextEl: '.swiper-button-next--1',
-        prevEl: '.swiper-button-prev--1',
-      },
-    });
-  } else {
-    const swiper1 = new Swiper('.swiper--1', {
-      loop: true,
+  breakpoints: {
+    320: {
       slidesPerView: 1,
       spaceBetween: 0,
-      modules: [Navigation],
+    },
 
-      navigation: {
-        nextEl: '.swiper-button-next--1',
-        prevEl: '.swiper-button-prev--1',
-      },
-    });
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 5.6 + '%',
+    },
+
+    980: {
+      slidesPerView: 3,
+      spaceBetween: 3 + '%',
+    },
+
+    1199: {
+      slidesPerView: 4,
+      spaceBetween: 3.1 + '%',
+    }
   }
-};
-
-DESKTOP_BREAKPOINT.addListener(breakpointChecker);
-TABLET_BRAKEPOINT.addListener(breakpointChecker);
-MOBILE_BREAKPOINT.addListener(breakpointChecker);
-breakpointChecker();
+});
 
 const swiper2 = new Swiper('.swiper--2', {
   loop: false,
@@ -156,6 +127,17 @@ const swiper2 = new Swiper('.swiper--2', {
     prevEl: '.swiper-button-prev--2',
   },
 });
+
+// let swiperButtons = document.querySelectorAll(".swiper-button--2");
+
+// swiper2.on('transitionEnd', function () {
+//   let slide = document.querySelector(".swiper--2").querySelector(".swiper-slide-active");
+//   swiperButtons.forEach((button) => {
+//       const halfOfHeight = slide.scrollHeight/2;
+//       console.log(swiper2.scrollHeight)
+//       button.style = `top: ${halfOfHeight}px"`;
+//   })
+// });
 
 window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();

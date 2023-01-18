@@ -86,7 +86,7 @@
 
     @include vp-767 {
       padding-right: 29px;
-      margin-bottom: 35px;
+      margin-bottom: 33px;
     }
   }
 
@@ -175,10 +175,11 @@
 
     @include vp-767 {
       position: relative;
+      aspect-ratio: 100 / 52;
       left: auto;
       transform: none;
       min-width: 100%;
-      height: 167px;
+      height: auto;
     }
   }
 

@@ -10,6 +10,14 @@
     & .instructor__image-container {
       z-index: -1;
     }
+
+    & .instructor__content-container {
+      padding-top: 54px;
+
+      @include vp-767 {
+        padding-top: 45px;
+      }
+    }
   }
 
   &:hover {
@@ -20,6 +28,14 @@
 
     & .instructor__image-container {
       z-index: -1;
+    }
+
+    & .instructor__content-container {
+      padding-top: 54px;
+
+      @include vp-767 {
+        padding-top: 45px;
+      }
     }
   }
 
@@ -32,14 +48,10 @@
     min-height: 294px;
     height: 100%;
     background: rgba(16, 38, 84, 0.89);
-    padding: 54px 19%;
-    padding-left: 17%;
-    padding-bottom: 25px;
+    padding: 0;
 
     @include vp-767 {
       min-height: 274px;
-      padding: 45px 10%;
-      padding-bottom: 20px;
     }
   }
 
@@ -81,9 +93,26 @@
     }
   }
 
+  &__content-container {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+
+    padding: 78px 19%;
+    padding-left: 17%;
+    padding-bottom: 25px;
+
+    @include vp-767 {
+      min-height: 274px;
+      padding: 60px 10%;
+      padding-bottom: 20px;
+    }
+  }
+
   &__image-container {
+    overflow: visible;
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
