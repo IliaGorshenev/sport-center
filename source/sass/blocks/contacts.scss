@@ -8,14 +8,14 @@
 
     margin: 0 auto;
 
-    padding-top: 57px;
+    padding-top: 56px;
     padding-right: 14.6%;
-    padding-left: 17.9%;
+    padding-left: 18%;
     padding-bottom: 64px;
     max-width: 1160px;
 
     @include vp-1199 {
-      padding: 62px 17.6%;
+      padding: 63px 17.6%;
       padding-bottom: 67px;
     }
 
@@ -141,9 +141,18 @@
     cursor: default;
 
     margin: 0;
+    align-self: flex-start;
 
     @include vp-1199 {
       font-size: 18px;
+    }
+
+    &--link {
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.6;
+      }
     }
   }
 }

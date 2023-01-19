@@ -72,9 +72,13 @@
   }
 
   &__advantages {
-    margin: 0;
-    padding-left: 25px;
+    margin: 0 auto;
+    padding-left: 33px;
     list-style-type: none;
+
+    @include vp-767 {
+      padding-left: 28px;
+    }
   }
 
   &__advantage {
@@ -96,10 +100,10 @@
   &__content-container {
     display: flex;
     flex-direction: column;
-    overflow: scroll;
+    overflow: auto;
 
-    padding: 78px 19%;
-    padding-left: 17%;
+    padding: 77px 15%;
+    padding-left: 15%;
     padding-bottom: 25px;
 
     @include vp-767 {

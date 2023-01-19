@@ -58,7 +58,7 @@
 
     @include vp-1199 {
       padding: 103px 5.8%;
-      padding-bottom: 115px;
+      padding-bottom: 120px;
     }
 
     @include vp-767 {
@@ -206,7 +206,7 @@
   &__card-item {
     @include vp-1199 {
       margin: 0 auto;
-      margin-bottom: 30px;
+      margin-bottom: 27px;
       width: 65%;
       min-width: 290px;
       max-width: 442px;

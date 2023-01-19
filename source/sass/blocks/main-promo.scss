@@ -26,6 +26,8 @@
   &__subtitle {
     margin-top: 11px;
     font-size: 18px;
+
+    letter-spacing: 0.1px;
   }
 
   &__title-name {
@@ -65,6 +67,7 @@
   &__image-container {
     width: 50%;
     min-height: 100%;
+    background-color: #ed0233;
 
     background-image: url("../img/promo-woman-desktop.jpg");
     background-repeat: no-repeat;

@@ -38,7 +38,7 @@
                 Фитнес центр
               </p>
             </div>
-            <a href="#" class="header__button">купить абонемент</a>
+            <a href="#" class="header__button" data-scroll="price">купить абонемент</a>
           </div>
           <div class="header__image-container">
             <picture>
@@ -79,7 +79,7 @@
           </div>
         </div>
       </section>
-      <section class="price">
+      <section class="price" data-scroll-to="price">
         <div class="price__wrapper">
           <h2 class="price__title">Абонементы</h2>
           <ul class="price__period-list">
@@ -326,12 +326,12 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-button-prev swiper-button-prev--1">
+            <div class="swiper-button-prev swiper-button-prev--1" tabindex="0">
               <svg class="swiper-icon" width="18" height="34" viewBox="0 0 18 34" aria-label="Назад" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M17 33L0.999999 17L17 0.999998" stroke="#AFAFAF"/>
               </svg>
             </div>
-            <div class="swiper-button-next swiper-button-next--1">
+            <div class="swiper-button-next swiper-button-next--1" tabindex="0">
               <svg class="swiper-icon" width="18" height="34" viewBox="0 0 18 34" aria-label="Вперед" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 1L17 17L1 33" stroke="#AFAFAF"/>
               </svg>
@@ -458,7 +458,7 @@
                 <div class="comments__slide swiper-slide">
                   <div class="comment">
                     <h3 class="comment__title">Александр Пашков</h3>
-                    <span class="comment__information">&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</span>
+                    <span class="comment__information">&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</span>
                     <div class="comment__image-container">
                       <picture>
                         <source type="image/webp" srcset="img/comment-1.webp 1x, img/comment-1@2x.webp 2x">
@@ -481,12 +481,12 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-button-prev swiper-button-prev--2">
+            <div class="swiper-button-prev swiper-button-prev--2" tabindex="0">
               <svg class="swiper-icon" width="18" height="34" viewBox="0 0 18 34" aria-label="Назад" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M17 33L0.999999 17L17 0.999998" stroke="#AFAFAF"/>
               </svg>
             </div>
-            <div class="swiper-button-next swiper-button-next--2">
+            <div class="swiper-button-next swiper-button-next--2" tabindex="0">
               <svg class="swiper-icon" width="18" height="34" viewBox="0 0 18 34" aria-label="вперед" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 1L17 17L1 33" stroke="#AFAFAF"/>
               </svg>
@@ -524,7 +524,7 @@
               </li>
               <li class="contacts__item">
                 <h3 class="contacts__item-title">Телефон:</h3>
-                <a href="tel:+78002000000" class="contacts__item-information">
+                <a href="tel:+78002000000" class="contacts__item-information contacts__item-information--link">
                   8-800-200-00-00
                 </a>
               </li>
@@ -534,7 +534,7 @@
               </li>
               <li class="contacts__item">
                 <h3 class="contacts__item-title">Email:</h3>
-                <a href="mailto:omsk@supergym.ru" class="contacts__item-information">omsk@supergym.ru</a>
+                <a href="mailto:omsk@supergym.ru" class="contacts__item-information contacts__item-information--link">omsk@supergym.ru</a>
               </li>
             </ul>
           </div>
@@ -548,15 +548,13 @@
             <use xlink:href="img/sprite.svg#main-logo"></use>
           </svg>
         </a>
-        <ul class="footer__navigation-list footer__navigation-list--left-column">
+        <ul class="footer__navigation-list">
           <li class="footer__navigation-item">
             <a href="#" class="footer__navigation-item-link">Услуги</a>
           </li>
           <li class="footer__navigation-item">
             <a href="#" class="footer__navigation-item-link">Абонементы</a>
           </li>
-        </ul>
-        <ul class="footer__navigation-list footer__navigation-list--right-column">
           <li class="footer__navigation-item">
             <a href="#" class="footer__navigation-item-link">Акции</a>
           </li>

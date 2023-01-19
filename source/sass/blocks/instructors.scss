@@ -43,13 +43,13 @@
     max-width: 1160px;
 
     @include vp-1199 {
-      padding: 59px 13.8%;
-      padding-left: 12.4%;
+      padding: 59px 13.5%;
+      padding-left: 12.7%;
       padding-bottom: 50px;
     }
 
     @include vp-767 {
-      padding: 32px 14.6%;
+      padding: 34px 14.6%;
       padding-bottom: 70px;
     }
   }
@@ -60,7 +60,11 @@
 
   &__slide {
     min-height: 294px;
-    aspect-ratio: 88.4 / 100;
+    aspect-ratio: 89 / 100;
+
+    @include vp-1199 {
+      aspect-ratio: 91 / 100;
+    }
 
     @include vp-767 {
       aspect-ratio: 82 / 100;

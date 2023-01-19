@@ -62,8 +62,12 @@
     position: relative;
     display: flex;
     margin: 0 auto;
-    margin-bottom: 32px;
+    margin-bottom: 34px;
     align-items: baseline;
+
+    @include vp-767 {
+      margin-bottom: 32px;
+    }
 
     &--5000::after {
       font-size: 100px;

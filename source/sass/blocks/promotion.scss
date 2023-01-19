@@ -15,7 +15,7 @@
     }
 
     @include vp-767 {
-      padding: 64px 4.6%;
+      padding: 65px 4.6%;
       padding-bottom: 40px;
     }
   }
@@ -29,7 +29,7 @@
     text-align: center;
 
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 33px;
 
     @include vp-1199 {
       position: relative;
@@ -74,7 +74,7 @@
     list-style-type: none;
 
     @include vp-1199 {
-      row-gap: 32px;
+      row-gap: 30px;
       column-gap: 4%;
     }
 

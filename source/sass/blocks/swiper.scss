@@ -6,6 +6,16 @@
   padding: 0;
 }
 
+.swiper--2 {
+  & .swiper-slide {
+    height: 1px;
+  }
+
+  & .swiper-slide-active {
+    height: auto;
+  }
+}
+
 .swiper-button-prev--1 {
   left: 0 - 5.2%;
 
@@ -110,12 +120,4 @@
   & ~ .swiper-button-next {
     display: none;
   }
-}
-
-.swiper-slide {
-  height: 1px;
-}
-
-.swiper-slide-active {
-  height: auto;
 }

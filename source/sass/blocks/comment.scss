@@ -51,6 +51,8 @@
     grid-column: 2 / 3;
     margin: 0;
 
+    letter-spacing: 0.1px;
+
     @include vp-1199 {
       letter-spacing: 0.1px;
     }

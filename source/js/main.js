@@ -3,6 +3,23 @@ import {initModals} from './modules/modals/init-modals';
 import Swiper from 'swiper';
 import {Navigation} from 'swiper';
 
+const scrollTo = function (where) {
+  const SCROLL_TARGET = document.querySelector(`[data-scroll-to="${where}"]`);
+  const elementPosition = SCROLL_TARGET.getBoundingClientRect().top;
+
+  window.scrollBy({
+    top: elementPosition,
+    behavior: 'smooth',
+  });
+};
+
+const SCROLL_ITEM = document.querySelector(`[data-scroll="price"]`);
+
+SCROLL_ITEM.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  scrollTo(Object.values(SCROLL_ITEM.dataset));
+});
+
 document.querySelector(".swiper--no-js--1").classList.remove("swiper--no-js--1");
 document.querySelector(".swiper--no-js--2").classList.remove("swiper--no-js--2");
 
@@ -106,8 +123,8 @@ const swiper1 = new Swiper('.swiper--1', {
     1199: {
       slidesPerView: 4,
       spaceBetween: 3.1 + '%',
-    }
-  }
+    },
+  },
 });
 
 const swiper2 = new Swiper('.swiper--2', {
@@ -127,17 +144,6 @@ const swiper2 = new Swiper('.swiper--2', {
     prevEl: '.swiper-button-prev--2',
   },
 });
-
-// let swiperButtons = document.querySelectorAll(".swiper-button--2");
-
-// swiper2.on('transitionEnd', function () {
-//   let slide = document.querySelector(".swiper--2").querySelector(".swiper-slide-active");
-//   swiperButtons.forEach((button) => {
-//       const halfOfHeight = slide.scrollHeight/2;
-//       console.log(swiper2.scrollHeight)
-//       button.style = `top: ${halfOfHeight}px"`;
-//   })
-// });
 
 window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
